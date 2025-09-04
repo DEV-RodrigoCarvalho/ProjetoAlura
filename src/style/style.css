@@ -12,14 +12,30 @@ body{
     color: #F6F6F6F6;
 }
 
+
+.cabecalho{
+    padding: 2% 0% 0% 0%;
+    gap: 20px;
+}
+
 .cabecalho__menu{
     justify-content: center;
-    padding: 8px;
+    padding: 4px 0 0 8%;
     gap: 24px;
     display: flex;
     text-align: center;
-    background-color: azure;
+    /* background-color: #22d4fd; */
     color: black;
+}
+
+.cabecalho__menu__link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600px;
+    color: #22d4fd;
+    text-decoration: none;
+
+
 }
 
 .titulo-destaque{
@@ -28,6 +44,7 @@ body{
 
 .titulo{
     color: aqua;
+    text-align: center;
 }
 
 .apresentacao__conteudo__texto{
@@ -107,4 +124,8 @@ h1{
 .rodape:hover{
     background-color: #f6f6f6;
     cursor: pointer;
+}
+
+p{
+    text-align: center;
 }
