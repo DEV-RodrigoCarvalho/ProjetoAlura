@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;      /* Preto */
+    --cor-secundaria: #F6F6F6;   /* Branco */
+    --cor-terciaria: #22D4FD;    /* Azul Ciano */
+    --cor-hover: #272727;         /* Cinza para o hover */
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adicionado para melhor controle de layout */
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; /* Ajustado para alinhar com o conteúdo */
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Adicionada transição suave */
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-secundaria); /* Efeito de hover mais sutil */
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 60%; /* Ajustado para dar mais espaço ao texto */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-family: var(--fonte-primaria);
+    font-size: 2.25rem; /* 36px */
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.6; /* Melhora a legibilidade */
+    text-align: justify; /* Alinha o texto de forma mais profissional */
+}
+
+.imagem__config {
+    width: 40%; /* Ajustado para o novo layout */
+    border-radius: 16px; /* Adiciona bordas arredondadas à imagem */
+    border: 3px solid var(--cor-terciaria);
+}
+
+.rodape {
+    padding: 24px;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-top: 5%; /* Adiciona um espaço antes do rodapé */
+}

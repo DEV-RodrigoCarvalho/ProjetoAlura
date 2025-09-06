@@ -1,27 +1,177 @@
-*{
+/* Importando uma fonte para um visual mais moderno */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    --cor-primaria: #ffffff;         /* Branco */
+    --cor-secundaria: #222831;       /* Cinza escuro/preto para texto e coluna esquerda */
+    --cor-terciaria: #393E46;        /* Cinza um pouco mais claro para detalhes */
+    --cor-destaque: #00ADB5;         /* Um tom de azul/verde para links e destaques */
+    --cor-fundo: #EEEEEE;           /* Fundo da página principal (cinza bem claro) */
+    
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+/* Reset básico e configurações globais */
+* {
+    margin: 0;
     padding: 0;
-    width: 0;
-}
-
-body{
-    /* height: 100vh; */
     box-sizing: border-box;
-    background-color: black;
-    color: #F6F6F6F6;
 }
 
-.titulo{
-    /* background-color: black; */
-    color: rgb(197, 209, 209);
-    text-align: 0;
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-terciaria);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.paragrafoExperiencia{
-    font-family: 'Montserrat', sans-serif;
+/* Estilos do Cabeçalho (Menu de Navegação) */
+.cabecalho {
+    padding: 2% 0% 2% 10%;
+    background-color: var(--cor-terciaria);
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--cor-fundo);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+/* Conteúdo Principal do Currículo */
+.curriculum-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    margin: 2% auto; /* Centraliza o container */
+    background-color: var(--cor-primaria);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-grow: 1;
+}
+
+/* Coluna da Esquerda (Contato e Habilidades) */
+.coluna-esquerda {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    width: 35%;
+    padding: 30px;
+}
+
+.coluna-esquerda h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contato ul, .habilidades ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.contato li, .habilidades li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contato a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato a:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
+
+.habilidades strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Coluna da Direita (Nome, Experiência, Educação) */
+.coluna-direita {
+    width: 65%;
+    padding: 40px 30px;
+}
+
+.nome-principal {
+    border: 2px solid var(--cor-secundaria);
     text-align: center;
-    padding: 16px;
-    gap: 8px;
-    align-items: center;
-    font-weight: 300;
+    padding: 15px;
+    margin-bottom: 40px;
 }
 
+.nome-principal h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin: 0;
+}
+
+.secao {
+    margin-bottom: 35px;
+}
+
+.secao h2 {
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-destaque);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.item-experiencia, .item-educacao, .item-curso {
+    margin-bottom: 20px;
+}
+
+.item-experiencia strong {
+    font-size: 1.1rem;
+    color: var(--cor-secundaria);
+}
+
+.item-experiencia p, .item-educacao p, .item-curso p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Estilos do Rodapé */
+.rodape {
+    padding: 20px;
+    color: var(--cor-fundo);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.rodape img {
+    width: 32px; /* Tamanho dos ícones */
+    transition: transform 0.3s ease;
+}
+
+.rodape img:hover {
+    transform: scale(1.2); /* Efeito de zoom no hover */
+}
